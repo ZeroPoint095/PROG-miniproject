@@ -14,17 +14,18 @@ def vertragingen():
         #print(treinRitten)
 
         if 'VertrekVertraging' in treinRitten:
+
                 VertrekTijd = treinRitten['VertrekTijd']
                 VertrekTijd = VertrekTijd[11:16]
                 VertrekVertragingTekst = treinRitten['VertrekVertragingTekst']
                 EindBestemming = treinRitten['EindBestemming']
                 TreinSoort = treinRitten['TreinSoort']
                 RouteTekst = treinRitten['RouteTekst']
-                while RouteTekst != RouteTekst:
+                while RouteTekst != treinRitten:
                     continue
                 print('De ' + TreinSoort + ' naar ' + RouteTekst + ' met als eindbestemming ' + EindBestemming + ' van ' + VertrekTijd + ' heeft een vertraging van ' + VertrekVertragingTekst + '.')
-        else:
-                'Er zijn op dit moment geen vertragingen bekend.'
+    else:
+        print('Er zijn op dit moment geen vertragingen bekend.')
 
     return vertragingen
 
