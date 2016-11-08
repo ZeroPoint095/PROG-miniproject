@@ -18,11 +18,11 @@ def actuele_vertrektijden_trein():
         vertrektijd = vertrek['VertrekTijd']
         vertrektijd = vertrektijd[11:16]
         treintype = vertrek['TreinSoort']
-        #spoor =
+        spoor = []
     for vertrek_spoor in vertrekkenXML['ActueleVertrekTijden']['VertrekkendeTrein']:
-        if vertrek['VertrekSpoor']['@wijziging'] is 'false':
+        if vertrek_spoor['VertrekSpoor']['@wijziging'] is 'false':
             spoor = vertrek['VertrekSpoor']['#text']
-        elif vertrek['VertrekSpoor']['@wijziging'] is 'true':
+        elif vertrek_spoor['VertrekSpoor']['@wijziging'] is 'true':
             spoor = vertrek['VertrekSpoor']['#text']
         #route = vertrek['RouteTekst']
         #vertraging = vertrektijden['VertrekVertragingTekst']
