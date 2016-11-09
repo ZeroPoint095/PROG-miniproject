@@ -35,4 +35,5 @@ def printTest():
     #resultaat in een zin
     print('De eerste de beste',optimaalReis()[2],'trein vertrekt om',optimaalReis()[0],'vanaf spoor',optimaalReis()[1])
 
-printTest()
+### uncomment to run ###
+#printTest()
