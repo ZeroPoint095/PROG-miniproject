@@ -34,3 +34,4 @@ response = requests.get(api_url, auth=auth_details)
 dienstRegelingXML = xmltodict.parse(response.text)
 vertragingen()
 
+a
