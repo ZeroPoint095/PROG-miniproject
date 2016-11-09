@@ -1,33 +1,15 @@
 import requests
 import xmltodict
+from API_NS import (auth_details, api_url_storingen)
 
-auth_details = ('hans1997@gmail.com', '8OkOpU2OHYLCQY2RharTmWCjWkKsohv7PtDLLwRq6p1JHPX6DDkWaw')
-api_url = 'http://webservices.ns.nl/ns-api-storingen?station=ut'
-response = requests.get(api_url, auth=auth_details)
-
-storingenXML = xmltodict.parse(response.text)
+response = requests.get(api_url_storingen, auth=auth_details)
+storingXML = xmltodict.parse(response.text)
 
 
+def gepland():
+    for storing in storingXML['Storingen']['Gepland']['Storing']:
+        traject = storing['Traject']
+        periode = storing['Periode']
+        print('Traject: ', traject, '\n' 'Periode: ', periode)
 
-
-storingID = storingenXML['Storingen']['Ongepland']['Storing']['id']
-storingTraject = storingenXML['Storingen']['Ongepland']['Storing']['Traject']
-storingReden = storingenXML['Storingen']['Ongepland']['Storing']['Reden']
-storingBericht = storingenXML['Storingen']['Ongepland']['Storing']['Bericht']
-storingIDGepland = storingenXML['Storingen']['Gepland']['Storing']['id']
-storingTrajectGepland = storingenXML['Storingen']['Gepland']['Storing']['Traject']
-storingPeriodeGepland = storingenXML['Storingen']['Gepland']['Storing']['Periode']
-storingBerichtGepland = storingenXML['Storingen']['Gepland']['Storing']['Bericht']
-
-print('Dit zijn de treinen met een ongeplande storing: ')
-print(storingTraject)
-print('Reden:', storingReden)
-
-print('\n', 'Dit zijn de treinen met een geplande storing: ')
-print(storingTrajectGepland)
-print('Periode: ', storingPeriodeGepland)
-
-
-
-
-
+gepland()
