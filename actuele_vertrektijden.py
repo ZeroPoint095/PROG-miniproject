@@ -6,7 +6,7 @@ response = requests.get(api_url, auth=auth_details)
 vertrekkenXML = xmltodict.parse(response.text)
 
 def actuele_vertrekinformatie():
-    uitvoer=['Dit zijn de vertrekkende treinen het komende uur']
+    uitvoer_avt_final=['Dit zijn de vertrekkende treinen het komende uur']
     for vertrek in vertrekkenXML['ActueleVertrekTijden']['VertrekkendeTrein']:
         vertraging = []
         route = []
@@ -27,7 +27,7 @@ def actuele_vertrekinformatie():
             route = 'geen tussenstations'
 
         uitvoer_avt = 'Om '+vertrektijd + ' vertrekt een trein (' + treintype+  ') naar ' + eindbestemming + ' van spoor ' + spoor + ' met een eventuele vertraging van: ' + vertraging + '.' + '\n '+  ' De eventuele tussenstations zijn: ' + route
-        uitvoer += [uitvoer_avt]
-    return uitvoer
+        uitvoer_avt_final += [uitvoer_avt]
+    return uitvoer_avt_final
 
 actuele_vertrekinformatie()
