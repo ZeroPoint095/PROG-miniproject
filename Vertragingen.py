@@ -7,7 +7,7 @@ from API_NS import (auth_details,
                     api_url)
 
 def vertragingen():
-    print('Informatie vertragingen: ')
+    Uitvoer_vertragingen = ['Informatie vertragingen: ']
     for treinRitten in dienstRegelingXML['ActueleVertrekTijden']['VertrekkendeTrein']:
         #print('VertrekVertragingTekst' in treinRitten)
         #print(treinRitten)
@@ -26,14 +26,14 @@ def vertragingen():
                 EindBestemming = treinRitten['EindBestemming']
                 TreinSoort = treinRitten['TreinSoort']
 
-                print('De ' + TreinSoort + ' naar ' + TussenStations + EindBestemming + ' van ' + VertrekTijd + ' heeft een vertraging van ' + Vertraging + '.')
+                Uitvoer_vertragingen += ['De ' + TreinSoort + ' naar ' + TussenStations + EindBestemming + ' van ' + VertrekTijd + ' heeft een vertraging van ' + Vertraging + '.']
 
         elif 'VertrekVertragingTekst' not in treinRitten:
-                print('Er zijn op dit moment geen vertragingen bekend.')
+                Uitvoer_vertragingen += ['Er zijn op dit moment geen vertragingen bekend.']
         break
-
+    print(Uitvoer_vertragingen)
+    return Uitvoer_vertragingen
 response = requests.get(api_url, auth=auth_details)
 dienstRegelingXML = xmltodict.parse(response.text)
 vertragingen()
-
 
