@@ -9,25 +9,26 @@ from API_NS import (auth_details,
 def vertragingen():
     print('Informatie vertragingen: ')
     for treinRitten in dienstRegelingXML['ActueleVertrekTijden']['VertrekkendeTrein']:
-
-        #print('VertrekVertraging' in treinRitten)
+        #print('VertrekVertragingTekst' in treinRitten)
         #print(treinRitten)
+        if 'RouteTekst' in treinRitten:
+            TussenStations = treinRitten['RouteTekst'] + ' met als eindbestemming '
+        else:
+            TussenStations = ''
 
-        if 'VertrekVertraging' in treinRitten:
+        if 'VertrekVertragingTekst' in treinRitten:
 
                 VertrekTijd = treinRitten['VertrekTijd']
                 VertrekTijd = VertrekTijd[11:16]
-                VertrekVertragingTekst = treinRitten['VertrekVertragingTekst']
+                Vertraging = treinRitten['VertrekVertragingTekst']
                 EindBestemming = treinRitten['EindBestemming']
                 TreinSoort = treinRitten['TreinSoort']
-                RouteTekst = treinRitten['RouteTekst']
-                while RouteTekst != treinRitten:
-                    continue
-                print('De ' + TreinSoort + ' naar ' + RouteTekst + ' met als eindbestemming ' + EindBestemming + ' van ' + VertrekTijd + ' heeft een vertraging van ' + VertrekVertragingTekst + '.')
-    else:
-        print('Er zijn op dit moment geen vertragingen bekend.')
 
-    return vertragingen
+                print('De ' + TreinSoort + ' naar ' + TussenStations + EindBestemming + ' van ' + VertrekTijd + ' heeft een vertraging van ' + Vertraging + '.')
+
+        elif 'VertrekVertragingTekst' not in treinRitten:
+                print('Er zijn op dit moment geen vertragingen bekend.')
+        break
 
 response = requests.get(api_url, auth=auth_details)
 dienstRegelingXML = xmltodict.parse(response.text)
