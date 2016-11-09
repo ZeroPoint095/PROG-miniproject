@@ -1,7 +1,8 @@
 import requests
 import xmltodict
 from API_NS import (auth_details)
-import time
+from datetime import datetime
+
 
 huidigeStation='Utrecht Centraal'
 bestemming='Woerden'
@@ -13,6 +14,7 @@ reisplannerXML = xmltodict.parse(response.text)
 
 def optimaalReis():
     'Returnt de eerste de beste vertrektijd, spoor nummer en treinsoort'
+    datetime.now
     for xml in reisplannerXML['ReisMogelijkheden']['ReisMogelijkheid']:
         if xml['Optimaal'] == 'true':
             tijd=xml['ActueleVertrekTijd']
@@ -20,7 +22,8 @@ def optimaalReis():
             spoor=xml['ReisDeel']['ReisStop'][0]['Spoor']['#text']
             trein=xml['ReisDeel']['VervoerType']
     return tijd, spoor, trein
-### mislukte xml parse pogingen ###
+
+# ## mislukte xml parse pogingen ###
 # optimaal = reisplannerXML['ReisMogelijkheden']['ReisMogelijkheid']['Optimaal']
 # actueleVertrektijd = reisplannerXML['ReisMogelijkheden']['ReisMogelijkheid']['ActueleVertrekTijd']
 # vertrekSpoor = reisplannerXML['ReisMogelijkheden']['ReisMogelijkheid']['ReisDeel']['Reisstop']['Spoor']
@@ -36,4 +39,4 @@ def printTest():
     print('De eerste de beste',optimaalReis()[2],'trein vertrekt om',optimaalReis()[0],'vanaf spoor',optimaalReis()[1])
 
 ### uncomment to run ###
-#printTest()
+printTest()
