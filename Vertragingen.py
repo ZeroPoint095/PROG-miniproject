@@ -11,6 +11,8 @@ def vertragingen():
     for treinRitten in dienstRegelingXML['ActueleVertrekTijden']['VertrekkendeTrein']:
         #print('VertrekVertragingTekst' in treinRitten)
         #print(treinRitten)
+
+        #if statement voor het geval trajecten geen tussenstations hebben.
         if 'RouteTekst' in treinRitten:
             TussenStations = treinRitten['RouteTekst'] + ' met als eindbestemming '
         else:
