@@ -31,7 +31,7 @@ def vertragingen():
         elif 'VertrekVertragingTekst' not in treinRitten:
                 Uitvoer_vertragingen += ['Er zijn op dit moment geen vertragingen bekend.']
         break
-    #print(Uitvoer_vertragingen)
+    print(Uitvoer_vertragingen)
     return Uitvoer_vertragingen
 response = requests.get(api_url, auth=auth_details)
 dienstRegelingXML = xmltodict.parse(response.text)
