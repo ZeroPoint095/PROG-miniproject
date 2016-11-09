@@ -29,4 +29,5 @@ def actuele_vertrekinformatie():
         uitvoer_avt = 'Om '+vertrektijd + ' vertrekt een trein (' + treintype+  ') naar ' + eindbestemming + ' van spoor ' + spoor + ' met een eventuele vertraging van: ' + vertraging + '.' + '\n '+  ' De eventuele tussenstations zijn: ' + route
         uitvoer += [uitvoer_avt]
     return uitvoer
+
 actuele_vertrekinformatie()
