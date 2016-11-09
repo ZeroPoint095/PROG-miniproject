@@ -26,11 +26,7 @@ def actuele_vertrekinformatie():
         else:
             route = 'geen tussenstations'
 
-        uitvoer_avt = 'Om '+vertrektijd + ' vertrekt een trein (' + treintype+  ') naar ' + eindbestemming + ' van spoor ' + spoor + ' met een eventuele vertraging van: ' + vertraging + '.'
-        uitvoer_avt2 = ' De eventuele tussenstations zijn: ' + route
-        #print(uitvoer_avt)
+        uitvoer_avt = 'Om '+vertrektijd + ' vertrekt een trein (' + treintype+  ') naar ' + eindbestemming + ' van spoor ' + spoor + ' met een eventuele vertraging van: ' + vertraging + '.' + '\n '+  ' De eventuele tussenstations zijn: ' + route
         uitvoer += [uitvoer_avt]
-        uitvoer += [uitvoer_avt2]
-    #print(uitvoer)
     return uitvoer
 actuele_vertrekinformatie()
