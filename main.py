@@ -29,8 +29,8 @@ class App:
         self.roel_hoofdmenu_knop = Button(frame, text="Roel", command=self.roel)
         self.roel_hoofdmenu_knop.pack(side=TOP, fill=X)
 
-        self.hans_hoofdmenu_knop = Button(frame, text="Hans", command=self.hans)
-        self.hans_hoofdmenu_knop.pack(side=TOP, fill=X)
+        self.storingen_hoofdmenu_knop = Button(frame, text="Storingen", command=self.Storingen)
+        self.storingen_hoofdmenu_knop.pack(side=TOP, fill=X)
 
     def quentin(self):
 
@@ -44,7 +44,7 @@ class App:
             self.ard_jan_weghalen()
         if roel:
             self.roel_weghalen()
-        if hans:
+        if Storingen:
             self.hans_weghalen()
 
         self.quentin_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.quentin_weghalen)
@@ -77,7 +77,7 @@ class App:
             self.ard_jan_weghalen()
         if roel:
             self.roel_weghalen()
-        if hans:
+        if Storingen:
             self.hans_weghalen()
 
         self.ard_jan_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.ard_jan_weghalen)
@@ -111,7 +111,7 @@ class App:
             self.ard_jan_weghalen()
         if roel:
             self.roel_weghalen()
-        if hans:
+        if Storingen:
             self.hans_weghalen()
 
         self.roel_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.roel_weghalen)
@@ -125,17 +125,17 @@ class App:
         self.roel_weghalen_knop.destroy()
         self.roel_functie_knop.destroy()
 
-        global hans
+        global Storingen
         roel=False
 
     def roel_functie(self):
         print('Roel')
 
-    def hans(self):
+    def Storingen(self):
 
         global frame
         global frame2
-        global hans
+        global Storingen
 
         if quentin:
             self.quentin_weghalen()
@@ -143,7 +143,7 @@ class App:
             self.ard_jan_weghalen()
         if roel:
             self.roel_weghalen()
-        if hans:
+        if Storingen:
             self.hans_weghalen()
 
         self.hans_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.hans_weghalen)
@@ -152,14 +152,14 @@ class App:
         self.hans_functie_knop = Button(frame2, text="Hans functie", command=self.hans_functie)
         self.hans_functie_knop.pack(side=TOP, fill=X)
 
-        hans=True
+        Storingen=True
 
     def hans_weghalen(self):
         self.hans_weghalen_knop.destroy()
         self.hans_functie_knop.destroy()
 
-        global hans
-        hans=False
+        global Storingen
+        Storingen=False
 
     def hans_functie(self):
         print('Hans')
@@ -167,7 +167,7 @@ class App:
 quentin=False
 ard_jan=False
 roel=False
-hans=False
+Storingen=False
 
 root = Tk()
 
