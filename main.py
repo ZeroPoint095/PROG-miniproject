@@ -11,6 +11,7 @@ class App:
         global frame
         global frame2
         global frame3
+        global frame4
 
         frame = Frame(master, width=250)
         frame.pack(side=LEFT)
