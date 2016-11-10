@@ -1,6 +1,6 @@
 from tkinter import *
 import actuele_vertrektijden
-import vertragingen
+#import vertragingen
 import storingen
 #import
 
@@ -10,12 +10,16 @@ class App:
 
         global frame
         global frame2
+        global frame3
 
         frame = Frame(master, width=250)
         frame.pack(side=LEFT)
 
         frame2 = Frame(master, width=250)
         frame2.pack(side=LEFT)
+
+        frame3 = Frame(master)
+        frame3.pack(side=LEFT)
 
         self.button = Button(frame, text="QUIT", fg="red", command=frame.quit)
         self.button.pack(side=TOP, fill=X)
@@ -101,7 +105,6 @@ class App:
 
     def roel(self):
 
-        global frame
         global frame2
         global roel
 
@@ -119,13 +122,14 @@ class App:
 
         self.roel_functie_knop = Button(frame2, text="Roel functie", command=self.roel_functie)
         self.roel_functie_knop.pack(side=TOP, fill=X)
+
         roel=True
 
     def roel_weghalen(self):
         self.roel_weghalen_knop.destroy()
         self.roel_functie_knop.destroy()
 
-        global Storingen
+        global roel
         roel=False
 
     def roel_functie(self):
@@ -133,7 +137,6 @@ class App:
 
     def Storingen(self):
 
-        global frame
         global frame2
         global Storingen
 
@@ -149,7 +152,7 @@ class App:
         self.storingen_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.storingen_weghalen)
         self.storingen_weghalen_knop.pack(side=TOP, fill=X)
 
-        self.storingen_functie_knop = Button(frame2, text="Hans functie", command=self.storingen_functie)
+        self.storingen_functie_knop = Button(frame2, text="Storingen", command=self.storingen_functie)
         self.storingen_functie_knop.pack(side=TOP, fill=X)
 
         Storingen=True
@@ -162,7 +165,8 @@ class App:
         Storingen=False
 
     def storingen_functie(self):
-        storing=storingen.storingen_ophalen()
+        storing=storingen.storingen_ophalen
+        self.storing_weergeven = Message(frame3, text=storing)
 
 quentin=False
 ard_jan=False
