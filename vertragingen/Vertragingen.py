@@ -8,11 +8,11 @@ from API_NS import (auth_details,
 
 def vertragingen():
     Uitvoer_vertragingen = []
-    #for-loop die XML data controleerd op vertragingen.
+    #For-loop die XML data controleerd op vertragingen.
     for treinRitten in dienstRegelingXML['ActueleVertrekTijden']['VertrekkendeTrein']:
         print('VertrekVertragingTekst' in treinRitten)
         print(treinRitten)
-
+        #Als er vertragingen zijn wordt deze IF-statement uitgevoerd.
         if 'VertrekVertragingTekst' in treinRitten:
 
             #If en else statements voor het geval trajecten geen tussenstations hebben.
@@ -29,11 +29,12 @@ def vertragingen():
             TreinSoort = treinRitten['TreinSoort']
 
             Uitvoer_vertragingen += ['De ' + TreinSoort + ' naar ' + TussenStations + EindBestemming + ' van ' + VertrekTijd + ' heeft een vertraging van ' + Vertraging + '.']
-        #Geen vertragingen in XML data dan dit weeregeven.
+        #Als er geen vertragingen in XML data aanwezig zijn wordt dit weergegeven.
         elif 'VertrekVertragingTekst' not in treinRitten:
             Uitvoer_vertragingen += ['Er zijn op dit moment geen vertragingen bekend.']
         break
     print(Uitvoer_vertragingen)
+    #Uitvoer van code versturen naar hoofdprogramma.
     return Uitvoer_vertragingen
 
 response = requests.get(api_url, auth=auth_details)
