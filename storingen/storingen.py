@@ -6,7 +6,7 @@ import re
 response = requests.get(api_url_storingen, auth=auth_details)
 storingXML = xmltodict.parse(response.text)
 
-def gepland():
+def storingen_ophalen():
 
     uitvoerSTR = []
     try:
