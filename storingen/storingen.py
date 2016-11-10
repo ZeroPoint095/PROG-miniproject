@@ -23,4 +23,3 @@ def storingen_ophalen():
 
     return uitvoerSTR
 
-gepland()
