@@ -11,7 +11,7 @@ bestemming='Rotterdam Noord'
 #    reisplannerXML=xmltodict.parse(xmlfile.read(),dict_constructor=dict)
 
 def reisplanner(huidigeStation, bestemming):
-'Returnt een string met de optimale reis van waarde huidigeStation, bestemming, inclusief eventuele overstap'
+    'Returnt een string met de optimale reis van waarde huidigeStation, bestemming, inclusief eventuele overstap'
 
     returnString=[]
     api_url = 'http://webservices.ns.nl/ns-api-treinplanner?fromStation='+huidigeStation+'&toStation='+bestemming+'&departure=trueexterne'
