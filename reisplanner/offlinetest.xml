@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ReisMogelijkheden>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T11:17:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T11:17:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T11:57:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T11:57:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>532</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T11:17:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Gouda</Naam>
+									<Tijd>2016-11-10T11:37:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Alexander</Naam>
+								<Tijd>2016-11-10T11:46:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4039</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Rotterdam Alexander</Naam>
+							<Tijd>2016-11-10T11:53:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">2</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T11:57:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T11:47:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T11:47:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T12:27:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T12:27:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>12534</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T11:47:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Gouda</Naam>
+									<Tijd>2016-11-10T12:07:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Alexander</Naam>
+								<Tijd>2016-11-10T12:16:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4041</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Rotterdam Alexander</Naam>
+							<Tijd>2016-11-10T12:23:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">2</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T12:27:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T12:17:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T12:17:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T12:57:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T12:57:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>536</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T12:17:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Gouda</Naam>
+									<Tijd>2016-11-10T12:37:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Alexander</Naam>
+								<Tijd>2016-11-10T12:46:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4043</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Rotterdam Alexander</Naam>
+							<Tijd>2016-11-10T12:53:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">2</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T12:57:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T12:47:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T12:47:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T13:27:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T13:27:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>12538</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T12:47:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Gouda</Naam>
+									<Tijd>2016-11-10T13:07:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Alexander</Naam>
+								<Tijd>2016-11-10T13:16:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4045</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Rotterdam Alexander</Naam>
+							<Tijd>2016-11-10T13:23:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">2</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T13:27:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T13:17:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T13:17:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T13:57:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T13:57:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>540</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T13:17:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Gouda</Naam>
+									<Tijd>2016-11-10T13:37:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Alexander</Naam>
+								<Tijd>2016-11-10T13:46:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4047</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Rotterdam Alexander</Naam>
+							<Tijd>2016-11-10T13:53:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">2</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T13:57:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>true</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T13:47:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T13:47:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T14:27:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T14:27:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>12542</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T13:47:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Gouda</Naam>
+									<Tijd>2016-11-10T14:07:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Alexander</Naam>
+								<Tijd>2016-11-10T14:16:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4049</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Rotterdam Alexander</Naam>
+							<Tijd>2016-11-10T14:23:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">2</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T14:27:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T14:17:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T14:17:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T14:57:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T14:57:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>544</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T14:17:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Gouda</Naam>
+								<Tijd>2016-11-10T14:36:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">8</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4051</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Gouda</Naam>
+							<Tijd>2016-11-10T14:41:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Nieuwerkerk a/d IJssel</Naam>
+									<Tijd>2016-11-10T14:47:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+								<ReisStop>
+									<Naam>Capelle Schollevaar</Naam>
+									<Tijd>2016-11-10T14:50:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+								<ReisStop>
+									<Naam>Rotterdam Alexander</Naam>
+									<Tijd>2016-11-10T14:53:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T14:57:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T14:47:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T14:47:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T15:27:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T15:27:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>12546</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T14:47:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Gouda</Naam>
+								<Tijd>2016-11-10T15:06:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">8</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4053</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Gouda</Naam>
+							<Tijd>2016-11-10T15:11:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Nieuwerkerk a/d IJssel</Naam>
+									<Tijd>2016-11-10T15:17:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+								<ReisStop>
+									<Naam>Capelle Schollevaar</Naam>
+									<Tijd>2016-11-10T15:20:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+								<ReisStop>
+									<Naam>Rotterdam Alexander</Naam>
+									<Tijd>2016-11-10T15:23:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T15:27:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T15:02:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T15:02:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T15:42:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T15:42:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>2848</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T15:02:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Gouda</Naam>
+								<Tijd>2016-11-10T15:21:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">8</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>9748</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Gouda</Naam>
+							<Tijd>2016-11-10T15:26:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Nieuwerkerk a/d IJssel</Naam>
+									<Tijd>2016-11-10T15:32:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+								<ReisStop>
+									<Naam>Capelle Schollevaar</Naam>
+									<Tijd>2016-11-10T15:35:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+								<ReisStop>
+									<Naam>Rotterdam Alexander</Naam>
+									<Tijd>2016-11-10T15:38:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T15:42:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T15:17:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T15:17:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T15:57:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T15:57:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>548</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T15:17:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Gouda</Naam>
+									<Tijd>2016-11-10T15:37:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Alexander</Naam>
+								<Tijd>2016-11-10T15:46:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>4055</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Rotterdam Alexander</Naam>
+							<Tijd>2016-11-10T15:53:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">2</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T15:57:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+		<ReisMogelijkheid>	
+			
+			<AantalOverstappen>1</AantalOverstappen>
+			<GeplandeReisTijd>0:40</GeplandeReisTijd>
+			
+				<ActueleReisTijd>0:40</ActueleReisTijd>
+			
+			
+			
+			<Optimaal>false</Optimaal>
+			<GeplandeVertrekTijd>2016-11-10T15:32:00+0100</GeplandeVertrekTijd>
+			<ActueleVertrekTijd>2016-11-10T15:32:00+0100</ActueleVertrekTijd>
+			<GeplandeAankomstTijd>2016-11-10T16:12:00+0100</GeplandeAankomstTijd>
+			<ActueleAankomstTijd>2016-11-10T16:12:00+0100</ActueleAankomstTijd>
+ 			
+            
+ 			    <Status>VOLGENS-PLAN</Status>
+ 			
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Intercity</VervoerType>
+						<RitNummer>2850</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Utrecht Centraal</Naam>
+							<Tijd>2016-11-10T15:32:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+							<ReisStop>
+								<Naam>Gouda</Naam>
+								<Tijd>2016-11-10T15:51:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">8</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+ 				<ReisDeel reisSoort="TRAIN">
+					
+                        
+					    <Vervoerder>NS</Vervoerder>
+						<VervoerType>Sprinter</VervoerType>
+						<RitNummer>9750</RitNummer>
+             			
+                        
+                              <Status>VOLGENS-PLAN</Status>
+                          
+						
+                         
+						
+                        
+						
+					
+					
+					<ReisStop>
+					  
+						
+							<Naam>Gouda</Naam>
+							<Tijd>2016-11-10T15:56:00+0100</Tijd>
+							
+							  
+								  
+								
+									<Spoor wijziging="false">8</Spoor>
+								 
+														
+						
+						
+					
+					</ReisStop>
+					  
+						
+							
+								<ReisStop>
+									<Naam>Nieuwerkerk a/d IJssel</Naam>
+									<Tijd>2016-11-10T16:02:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+								<ReisStop>
+									<Naam>Capelle Schollevaar</Naam>
+									<Tijd>2016-11-10T16:05:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+								<ReisStop>
+									<Naam>Rotterdam Alexander</Naam>
+									<Tijd>2016-11-10T16:08:00+0100</Tijd>
+																		
+								</ReisStop>
+							
+							<ReisStop>
+								<Naam>Rotterdam Noord</Naam>
+								<Tijd>2016-11-10T16:12:00+0100</Tijd>
+								
+								  
+									  
+									
+										<Spoor wijziging="false">2</Spoor>
+									 
+								 
+							</ReisStop>
+						
+						
+					
+				</ReisDeel>
+			
+		</ReisMogelijkheid>
+	
+</ReisMogelijkheden>
