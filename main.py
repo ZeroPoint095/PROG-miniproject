@@ -2,7 +2,8 @@ from tkinter import *
 #import actuele_vertrektijden
 from Vertragingen import vertragingen
 from storingen import storingen_ophalen
-#import
+#from reisplanner import optimaalReis
+from actuele_vertrektijden import actuele_vertrekinformatie
 
 class App:
 
@@ -32,8 +33,8 @@ class App:
         self.quentin_hoofdmenu_knop = Button(frame, text="Quentin", command=self.quentin, bg="yellow", fg="blue")
         self.quentin_hoofdmenu_knop.pack(side=TOP, fill=X)
 
-        self.ard_jan_hoofdmenu_knop = Button(frame, text="Ard-Jan", command=self.ard_jan, bg="yellow", fg="blue")
-        self.ard_jan_hoofdmenu_knop.pack(side=TOP, fill=X)
+        self.actuele_vertrektijden_hoofdmenu_knop = Button(frame, text="Ard-Jan", command=self.actuele_vertrektijden, bg="yellow", fg="blue")
+        self.actuele_vertrektijden_hoofdmenu_knop.pack(side=TOP, fill=X)
 
         self.vertragingen_hoofdmenu_knop = Button(frame, text="vertraging", command=self.vertraging, bg="yellow", fg="blue")
         self.vertragingen_hoofdmenu_knop.pack(side=TOP, fill=X)
@@ -49,8 +50,8 @@ class App:
 
         if quentin:
             self.quentin_weghalen()
-        if ard_jan:
-            self.ard_jan_weghalen()
+        if actuele_vertrektijden:
+            self.actuele_vertrektijden_weghalen()
         if vertraging:
             self.vertraging_weghalen()
         if Storingen:
@@ -74,39 +75,55 @@ class App:
     def quentin_functie(self):
         print('Quentin')
 
-    def ard_jan(self):
+    def actuele_vertrektijden(self):
 
         global frame
         global frame2
-        global ard_jan
+        global actuele_vertrektijden
 
         if quentin:
             self.quentin_weghalen()
-        if ard_jan:
-            self.ard_jan_weghalen()
+        if actuele_vertrektijden:
+            self.actuele_vertrektijden_weghalen()
         if vertraging:
             self.vertraging_weghalen()
         if Storingen:
             self.storingen_weghalen()
 
-        self.ard_jan_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.ard_jan_weghalen, bg="yellow")
-        self.ard_jan_weghalen_knop.pack(side=TOP, fill=X)
+        self.actuele_vertrektijden_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.actuele_vertrektijden_weghalen, bg="yellow")
+        self.actuele_vertrektijden_weghalen_knop.pack(side=TOP, fill=X)
 
-        self.ard_jan_knop = Button(frame2, text="Ard_jan functie", command=self.ard_jan_functie, bg="yellow", fg="blue")
-        self.ard_jan_knop.pack(side=TOP, fill=X)
+        self.actuele_vertrektijden_knop = Button(frame2, text="actuele_vertrektijden functie", command=self.actuele_vertrektijden_functie, bg="yellow", fg="blue")
+        self.actuele_vertrektijden_knop.pack(side=TOP, fill=X)
 
-        ard_jan=True
+        actuele_vertrektijden=True
 
-    def ard_jan_weghalen(self):
-        self.ard_jan_weghalen_knop.destroy()
-        self.ard_jan_knop.destroy()
+    def actuele_vertrektijden_weghalen(self):
+        global actuele_vertrektijden_weergegeven
+        self.actuele_vertrektijden_weghalen_knop.destroy()
+        self.actuele_vertrektijden_knop.destroy()
+        if actuele_vertrektijden_weergegeven:
+            self.actuele_vertrektijden_label.destroy()
+            actuele_vertrektijden_weergegeven=False
 
-        global ard_jan
-        ard_jan=False
+        global actuele_vertrektijden
+        actuele_vertrektijden=False
 
 
-    def ard_jan_functie(self):
-        print('Ard_jan')
+    def actuele_vertrektijden_functie(self):
+        global scrollbar
+        global actuele_vertrektijden_weergegeven
+        if actuele_vertrektijden_weergegeven:
+            self.actuele_vertrektijden_label.destroy()
+            actuele_vertrektijden_weergegeven=False
+        tekst=''
+        self.actuele_vertrektijden_label=Text(frame3, width=900, height=1000)
+        for vertrektijd in actuele_vertrekinformatie():
+            self.actuele_vertrektijden_label.insert(END, vertrektijd)
+        self.actuele_vertrektijden_label.pack(fill=BOTH)
+
+        actuele_vertrektijden_weergegeven=True
+        scrollbar.config(command=self.actuele_vertrektijden_label.yview)
 
     def vertraging(self):
 
@@ -115,8 +132,8 @@ class App:
 
         if quentin:
             self.quentin_weghalen()
-        if ard_jan:
-            self.ard_jan_weghalen()
+        if actuele_vertrektijden:
+            self.actuele_vertrektijden_weghalen()
         if vertraging:
             self.vertraging_weghalen()
         if Storingen:
@@ -163,8 +180,8 @@ class App:
 
         if quentin:
             self.quentin_weghalen()
-        if ard_jan:
-            self.ard_jan_weghalen()
+        if actuele_vertrektijden:
+            self.actuele_vertrektijden_weghalen()
         if vertraging:
             self.vertraging_weghalen()
         if Storingen:
@@ -199,16 +216,18 @@ class App:
         self.storing_weergeven = Canvas(frame3, yscrollcommand=scrollbar.set)#, bg='blue')
         self.storing_weergeven.config(width=1000, height=500)
         self.storing_weergeven.config(scrollregion=(500,0,1500, (250*len(storingen_ophalen()))))
-        self.storing_weergeven.pack(expand=YES, padx=200)
+        self.storing_weergeven.pack(expand=YES)
 
         i=0
         for storing in storingen_ophalen():
+            self.storing_weergeven.create_text(900, 50+i*250, text=storing, width=700)
             i+=1
-            self.storing_weergeven.create_text(500, i*250, text=storing)
+
         scrollbar.config(command=self.storing_weergeven.yview)
 
 quentin=False
-ard_jan=False
+actuele_vertrektijden=False
+actuele_vertrektijden_weergegeven=False
 vertraging=False
 vertraging_weergegeven=False
 Storingen=False
