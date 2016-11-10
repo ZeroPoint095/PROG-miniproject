@@ -1,7 +1,7 @@
 from tkinter import *
-#import actuele_vertrektijden
-#import vertragingen
-#import
+import actuele_vertrektijden
+import vertragingen
+import storingen
 #import
 
 class App:
@@ -45,7 +45,7 @@ class App:
         if roel:
             self.roel_weghalen()
         if Storingen:
-            self.hans_weghalen()
+            self.storingen_weghalen()
 
         self.quentin_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.quentin_weghalen)
         self.quentin_weghalen_knop.pack(side=TOP, fill=X)
@@ -78,7 +78,7 @@ class App:
         if roel:
             self.roel_weghalen()
         if Storingen:
-            self.hans_weghalen()
+            self.storingen_weghalen()
 
         self.ard_jan_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.ard_jan_weghalen)
         self.ard_jan_weghalen_knop.pack(side=TOP, fill=X)
@@ -112,7 +112,7 @@ class App:
         if roel:
             self.roel_weghalen()
         if Storingen:
-            self.hans_weghalen()
+            self.storingen_weghalen()
 
         self.roel_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.roel_weghalen)
         self.roel_weghalen_knop.pack(side=TOP, fill=X)
@@ -144,25 +144,25 @@ class App:
         if roel:
             self.roel_weghalen()
         if Storingen:
-            self.hans_weghalen()
+            self.storingen_weghalen()
 
-        self.hans_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.hans_weghalen)
-        self.hans_weghalen_knop.pack(side=TOP, fill=X)
+        self.storingen_weghalen_knop = Button(frame2, text="hoofdmenu", fg="red", command=self.storingen_weghalen)
+        self.storingen_weghalen_knop.pack(side=TOP, fill=X)
 
-        self.hans_functie_knop = Button(frame2, text="Hans functie", command=self.hans_functie)
-        self.hans_functie_knop.pack(side=TOP, fill=X)
+        self.storingen_functie_knop = Button(frame2, text="Hans functie", command=self.storingen_functie)
+        self.storingen_functie_knop.pack(side=TOP, fill=X)
 
         Storingen=True
 
-    def hans_weghalen(self):
-        self.hans_weghalen_knop.destroy()
-        self.hans_functie_knop.destroy()
+    def storingen_weghalen(self):
+        self.storingen_weghalen_knop.destroy()
+        self.storingen_functie_knop.destroy()
 
         global Storingen
         Storingen=False
 
-    def hans_functie(self):
-        print('Hans')
+    def storingen_functie(self):
+        storing=storingen.storingen_ophalen()
 
 quentin=False
 ard_jan=False
