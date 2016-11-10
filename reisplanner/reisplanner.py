@@ -12,6 +12,7 @@ bestemming='Rotterdam Noord'
 # response = requests.get(api_url, auth=auth_details)
 # reisplannerXML = xmltodict.parse(response.text)
 
+
 ## offline xml
 with open('offlinetest.xml') as xmlfile:
     reisplannerXML=xmltodict.parse(xmlfile.read(),dict_constructor=dict)
