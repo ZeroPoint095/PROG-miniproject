@@ -19,14 +19,17 @@ def makeIntercityStationList():
                     icList.append(station['Namen']['Lang'])
     return icList
 
-def makeIntercityStationDict():
+def makeIntercityStationDict(icList):
     stationsAlfa = defaultdict(list)
     for station in icList:
         stationsAlfa[station[0]].append(station)
     return stationsAlfa
 
-icList=makeIntercityStationList()
-icAlfaDict=makeIntercityStationDict()
+def returnStations:
+    icList=makeIntercityStationList()
+    icAlfaDict=makeIntercityStationDict(icList)
+    return icAlfaDict   #alle intercity stations met 1e letter als key, alle stations met
+                        #de desbetreffende letter als value.
 
 #mislukte code
 # from itertools import groupby

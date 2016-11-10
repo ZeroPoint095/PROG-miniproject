@@ -4,7 +4,7 @@ from API_NS import (auth_details)
 from datetime import datetime
 
 huidigeStation='Utrecht Centraal'
-bestemming='Rotterdam Noord'
+bestemming='GUI knoppen uitvoer hier plaatsen'
 
 ## offline xml
 # with open('offlinetest.xml') as xmlfile:
