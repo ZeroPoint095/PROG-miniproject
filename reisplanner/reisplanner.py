@@ -8,16 +8,14 @@ huidigeStation='Utrecht Centraal'
 bestemming='Rotterdam Noord'
 
 #online xml
-# api_url = 'http://webservices.ns.nl/ns-api-treinplanner?fromStation='+huidigeStation+'&toStation='+bestemming+'&departure=trueexterne'
-# response = requests.get(api_url, auth=auth_details)
-# reisplannerXML = xmltodict.parse(response.text)
+api_url = 'http://webservices.ns.nl/ns-api-treinplanner?fromStation='+huidigeStation+'&toStation='+bestemming+'&departure=trueexterne'
+response = requests.get(api_url, auth=auth_details)
+reisplannerXML = xmltodict.parse(response.text)
 
 
 ## offline xml
-with open('offlinetest.xml') as xmlfile:
-    reisplannerXML=xmltodict.parse(xmlfile.read(),dict_constructor=dict)
-
-
+# with open('offlinetest.xml') as xmlfile:
+#    reisplannerXML=xmltodict.parse(xmlfile.read(),dict_constructor=dict)
 
 def optimaalReis():
     'Returnt de eerste de beste vertrektijd, spoor nummer en treinsoort'
@@ -26,9 +24,11 @@ def optimaalReis():
         if xml['Optimaal'] == 'true':
             overstap = 0
             overstapStation =[]
-            while xml['AantalOverstappen'] != overstap:
-                overstappenIn=xml['ReisDeel'][0]['Reisstop'][0]['Naam']
+            aantalOverstappen = int(xml['AantalOverstappen'])
+            while aantalOverstappen != overstap:
+                overstappenIn=xml['ReisDeel'][1]['ReisStop'][0]['Naam']
                 overstapStation.append(overstappenIn)
+                print(overstapStation)
                 overstap+=1
             tijd=xml['ActueleVertrekTijd'] #actuele vertrektijd volgens de NS API
             tijd=datetime.strptime(tijd, "%Y-%m-%dT%H:%M:%S%z")#converteert ISO tijd naar datetime tijd
@@ -36,7 +36,7 @@ def optimaalReis():
             #tijdOver=datetime.strftime(tijd, '%H:%M')-datetime.now()
             spoor=xml['ReisDeel'][0]['ReisStop'][0]['Spoor']['#text']
             trein=xml['ReisDeel'][0]['VervoerType']
-    return tijd, spoor, trein, #overstapStation
+    return tijd, spoor, trein, overstapStation
 
 # ## mislukte xml parse pogingen ###
 # optimaal = reisplannerXML['ReisMogelijkheden']['ReisMogelijkheid']['Optimaal']
