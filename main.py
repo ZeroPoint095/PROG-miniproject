@@ -1,9 +1,8 @@
 from tkinter import *
-
-import reisplanner
+from reisplanner import reisplanner
 from Vertragingen import vertragingen
-from actueleVertrektijden.actuele_vertrektijden import actuele_vertrekinformatie
-from reisplanner.intercitystations import returnStations
+from actuele_vertrektijden import actuele_vertrekinformatie
+from intercitystations import returnStations
 from storingen import storingen_ophalen_gepland
 from storingen import storingen_ophalen_ongepland
 
@@ -70,16 +69,38 @@ class App:
         reisplanner=True
 
     def reisplanner_weghalen(self):
+
+        global reisplanner_stationsweergegeven
+        global reisplanner_weergegeven
+        global stationslettergebruikt
         self.reisplanner_weghalen_knop.destroy()
         self.reisplanner_functie_knop.destroy()
+
+        letters=["A", "B", "C", "D", "E", "G", "H", "L", "M", "N", "O", "R", "S", "T", "V", "W", "Z"]
+        ICDICT=returnStations()
+
+        if reisplanner_weergegeven:
+            for letter in letters:
+                self.letter_knop.destroy()
+
+        if reisplanner_stationsweergegeven:
+            for station in ICDICT[stationslettergebruikt]:
+                self.station_knop.destroy()
+            reisplanner_stationsweergegeven=False
 
         global reisplanner
         reisplanner=False
 
+    def reisweergeven(self):
+        global stationgebruikt
+        print(reisplanner('Utrecht Centraal', stationgebruikt))
+
     def stationsweergeven(self, stationsletter):
         global reisplanner_stationsweergegeven
         global frame4
-
+        global stationslettergebruikt
+        global stationgebruikt
+        stationslettergebruikt=stationsletter
         ICDICT=returnStations()
 
         if reisplanner_stationsweergegeven:
@@ -90,7 +111,8 @@ class App:
         reisplanner_stationsweergegeven=True
 
         for station in ICDICT[stationsletter]:
-            self.station_knop = Button(frame4, text=station, fg="red", bg="yellow", command=reisplanner('Utrecht Centraal', station))
+            stationgebruikt=station
+            self.station_knop = Button(frame4, text=station, fg="red", bg="yellow", command=self.reisweergeven)
             self.station_knop.pack(side=TOP, padx=250)
 
     def reisplanner_functie(self):
@@ -103,6 +125,7 @@ class App:
         if reisplanner_weergegeven:
             for letter in letters:
                 self.letter_knop.destroy()
+            reisplanner_weergegeven=False
 
         for letter in letters:
             self.letter_knop = Button(frame3, text=letter, fg="red", bg="yellow", command=self.stationsweergeven(letter))
@@ -209,7 +232,7 @@ class App:
 
         vertraging_weergegeven=True
 
-        scrollbar.config(command=self.storingen_weergeven.yview)
+        scrollbar.config(command=self.vertraging_weergeven.yview)
 
     def Storingen(self):
 
@@ -275,5 +298,7 @@ storingen_weergegeven=False
 root = Tk()
 
 app = App(root)
+
+print(reisplanner("Utrecht Centraal", "Hoorn"))
 
 root.mainloop()
