@@ -18,7 +18,7 @@ def storingen_ophalen_gepland():                                            #Hie
             storingen_uitvoer = 'Traject:' + traject + bericht_new          #Voegt Traject en het bericht samen tot een bericht
             uitvoerSTR += [storingen_uitvoer]                               #Hierin worden de berichten samen met het traject toegevoegt aan een list
     except:
-        uitvoerSTR = ['Er zijn geen geplande storingen']                    #Als er geen keys traject en bericht voorkomen, wordt er een foutmelding lat
+        uitvoerSTR = ['Er zijn geen geplande storingen\n']                  #Als er geen keys traject en bericht voorkomen, wordt er een foutmelding lat
     return uitvoerSTR
 
 print(storingen_ophalen_gepland())

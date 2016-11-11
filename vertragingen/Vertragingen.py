@@ -31,7 +31,7 @@ def vertragingen():
             EindBestemming = treinRit['EindBestemming']
             TreinSoort = treinRit['TreinSoort']
             #Voegt alle vertragingen toe aan uitvoerlijst.
-            Uitvoer_vertragingen += ['De ' + color.BOLD + TreinSoort + color.END + ' naar ' + color.BOLD + EindBestemming + TussenStations + color.END + ' van ' + color.BOLD + VertrekTijd + color.END + ' heeft een vertraging van ' + color.BOLD + Vertraging + color.END + '.']
+            Uitvoer_vertragingen += ['De ' + TreinSoort + ' naar ' + EindBestemming + TussenStations + ' van ' + VertrekTijd + ' heeft een vertraging van ' + Vertraging + '.']
 
     #Als er geen vertragingen aan de uitvoerlijst zijn toegevoegd wordt dit aan de lijst toegevoegd.
     if len(Uitvoer_vertragingen) == 0:
@@ -40,18 +40,6 @@ def vertragingen():
     print(Uitvoer_vertragingen)
     #Uitvoerlijst versturen naar hoofdprogramma.
     return Uitvoer_vertragingen
-
-class color:
-   PURPLE = '\033[95m'
-   CYAN = '\033[96m'
-   DARKCYAN = '\033[36m'
-   BLUE = '\033[94m'
-   GREEN = '\033[92m'
-   YELLOW = '\033[93m'
-   RED = '\033[91m'
-   BOLD = '\033[1m'
-   UNDERLINE = '\033[4m'
-   END = '\033[0m'
 
 response = requests.get(api_url, auth=auth_details)
 dienstRegelingXML = xmltodict.parse(response.text)
