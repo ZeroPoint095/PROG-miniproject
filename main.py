@@ -1,5 +1,5 @@
 from tkinter import *
-from Reisplanner import reisplanner
+from reisplanner import reisplanner
 from Vertragingen import vertragingen
 from actuele_vertrektijden import actuele_vertrekinformatie
 from intercitystations import returnStations
