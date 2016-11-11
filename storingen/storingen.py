@@ -20,6 +20,6 @@ def storingen_ophalen():
             uitvoerSTR += [storingen_uitvoer]                               #Hierin worden de berichten samen met het traject toegevoegt aan een list
     except:
         uitvoerSTR = ['Er zijn geen storingen']                             #Als er geen keys traject en bericht voorkomen, wordt er een foutmelding laten zien
-
     return uitvoerSTR
 
+print(storingen_ophalen())
