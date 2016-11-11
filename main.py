@@ -125,7 +125,6 @@ class App:
         letters=["A", "B", "C", "D", "E", "G", "H", "L", "M", "N", "O", "R", "S", "T", "V", "W", "Z"]
 
         if reisplanner_weergegeven:
-            #for letter in letters:
             self.letterA_knop.destroy()
             self.letterB_knop.destroy()
             self.letterC_knop.destroy()
