@@ -1,10 +1,13 @@
 from tkinter import *
-from reisplanner import reisplanner
+
+from intercitystations import returnStations
+from reisplanner import reisplannerUitvoeren
+
 from Vertragingen import vertragingen
 from actuele_vertrektijden import actuele_vertrekinformatie
-from intercitystations import returnStations
 from storingen import storingen_ophalen_gepland
 from storingen import storingen_ophalen_ongepland
+
 
 class App:
 
@@ -49,9 +52,9 @@ class App:
     def reisplanner(self):
 
         global frame2
-        global reisplanner
+        global reisplanners
 
-        if reisplanner:
+        if reisplanners:
             self.reisplanner_weghalen()
         if actuele_vertrektijden:
             self.actuele_vertrektijden_weghalen()
@@ -66,7 +69,7 @@ class App:
         self.reisplanner_functie_knop = Button(frame2, text="Reisplanner", command=self.reisplanner_functie, bg="yellow", fg="blue")
         self.reisplanner_functie_knop.pack(side=TOP, fill=X)
 
-        reisplanner=True
+        reisplanners=True
 
     def reisplanner_weghalen(self):
 
@@ -88,12 +91,11 @@ class App:
                 self.station_knop.destroy()
             reisplanner_stationsweergegeven=False
 
-        global reisplanner
-        reisplanner=False
+        global reisplanners
+        reisplanners=False
 
-    def reisweergeven(self):
-        global stationgebruikt
-        print(reisplanner('Utrecht Centraal', stationgebruikt))
+    def reisweergeven(self, station):
+        print(reisplannerUitvoeren('Utrecht Centraal', station))
 
     def stationsweergeven(self, stationsletter):
         global reisplanner_stationsweergegeven
@@ -111,9 +113,9 @@ class App:
         reisplanner_stationsweergegeven=True
 
         for station in ICDICT[stationsletter]:
-            stationgebruikt=station
-            self.station_knop = Button(frame4, text=station, fg="red", bg="yellow", command=self.reisweergeven)
+            self.station_knop = Button(frame4, text=station, fg="red", bg="yellow", command=self.reisweergeven(station))
             self.station_knop.pack(side=TOP, padx=250)
+
 
     def reisplanner_functie(self):
 
@@ -123,13 +125,68 @@ class App:
         letters=["A", "B", "C", "D", "E", "G", "H", "L", "M", "N", "O", "R", "S", "T", "V", "W", "Z"]
 
         if reisplanner_weergegeven:
-            for letter in letters:
-                self.letter_knop.destroy()
+            #for letter in letters:
+            self.letterA_knop.destroy()
+            self.letterB_knop.destroy()
+            self.letterC_knop.destroy()
+            self.letterD_knop.destroy()
+            self.letterE_knop.destroy()
+            self.letterG_knop.destroy()
+            self.letterH_knop.destroy()
+            self.letterL_knop.destroy()
+            self.letterM_knop.destroy()
+            self.letterN_knop.destroy()
+            self.letterO_knop.destroy()
+            self.letterR_knop.destroy()
+            self.letterS_knop.destroy()
+            self.letterT_knop.destroy()
+            self.letterV_knop.destroy()
+            self.letterW_knop.destroy()
+            self.letterZ_knop.destroy()
             reisplanner_weergegeven=False
 
-        for letter in letters:
-            self.letter_knop = Button(frame3, text=letter, fg="red", bg="yellow", command=self.stationsweergeven(letter))
-            self.letter_knop.pack(side=TOP, padx=250)
+        self.letterA_knop = Button(frame3, text=letters[0], fg="red", bg="yellow", command=self.stationsweergeven(letters[0]))
+        self.letterA_knop.pack(side=TOP, padx=250)
+
+        self.letterB_knop = Button(frame3, text=letters[1], fg="red", bg="yellow", command=self.stationsweergeven(letters[1]))
+        self.letterB_knop.pack(side=TOP, padx=250)
+
+        self.letterC_knop = Button(frame3, text=letters[2], fg="red", bg="yellow", command=self.stationsweergeven(letters[2]))
+        self.letterC_knop.pack(side=TOP, padx=250)
+
+        self.letterD_knop = Button(frame3, text=letters[3], fg="red", bg="yellow", command=self.stationsweergeven(letters[3]))
+        self.letterD_knop.pack(side=TOP, padx=250)
+        self.letterE_knop = Button(frame3, text=letters[4], fg="red", bg="yellow", command=self.stationsweergeven(letters[4]))
+        self.letterE_knop.pack(side=TOP, padx=250)
+        self.letterG_knop = Button(frame3, text=letters[5], fg="red", bg="yellow", command=self.stationsweergeven(letters[5]))
+        self.letterG_knop.pack(side=TOP, padx=250)
+        self.letterH_knop = Button(frame3, text=letters[6], fg="red", bg="yellow", command=self.stationsweergeven(letters[6]))
+        self.letterH_knop.pack(side=TOP, padx=250)
+        self.letterL_knop = Button(frame3, text=letters[7], fg="red", bg="yellow", command=self.stationsweergeven(letters[7]))
+        self.letterL_knop.pack(side=TOP, padx=250)
+        self.letterM_knop = Button(frame3, text=letters[8], fg="red", bg="yellow", command=self.stationsweergeven(letters[8]))
+        self.letterM_knop.pack(side=TOP, padx=250)
+        self.letterN_knop = Button(frame3, text=letters[9], fg="red", bg="yellow", command=self.stationsweergeven(letters[9]))
+        self.letterN_knop.pack(side=TOP, padx=250)
+        self.letterO_knop = Button(frame3, text=letters[10], fg="red", bg="yellow", command=self.stationsweergeven(letters[10]))
+        self.letterO_knop.pack(side=TOP, padx=250)
+        self.letterR_knop = Button(frame3, text=letters[11], fg="red", bg="yellow", command=self.stationsweergeven(letters[11]))
+        self.letterR_knop.pack(side=TOP, padx=250)
+        self.letterS_knop = Button(frame3, text=letters[12], fg="red", bg="yellow", command=self.stationsweergeven(letters[12]))
+        self.letterS_knop.pack(side=TOP, padx=250)
+        self.letterT_knop = Button(frame3, text=letters[13], fg="red", bg="yellow", command=self.stationsweergeven(letters[13]))
+        self.letterT_knop.pack(side=TOP, padx=250)
+        self.letterV_knop = Button(frame3, text=letters[14], fg="red", bg="yellow", command=self.stationsweergeven(letters[14]))
+        self.letterV_knop.pack(side=TOP, padx=250)
+        self.letterW_knop = Button(frame3, text=letters[15], fg="red", bg="yellow", command=self.stationsweergeven(letters[15]))
+        self.letterW_knop.pack(side=TOP, padx=250)
+        self.letterZ_knop = Button(frame3, text=letters[16], fg="red", bg="yellow", command=self.stationsweergeven(letters[16]))
+        self.letterZ_knop.pack(side=TOP, padx=250)
+
+
+        #for letter in letters:
+        #    self.letter_knop = Button(frame3, text=letter, fg="red", bg="yellow", command=self.stationsweergeven(letter))
+        #    self.letter_knop.pack(side=TOP, padx=250)
 
         reisplanner_weergegeven=True
 
@@ -138,7 +195,7 @@ class App:
         global frame2
         global actuele_vertrektijden
 
-        if reisplanner:
+        if reisplanners:
             self.reisplanner_weghalen()
         if actuele_vertrektijden:
             self.actuele_vertrektijden_weghalen()
@@ -186,7 +243,7 @@ class App:
         global frame2
         global vertraging
 
-        if reisplanner:
+        if reisplanners:
             self.reisplanner_weghalen()
         if actuele_vertrektijden:
             self.actuele_vertrektijden_weghalen()
@@ -239,7 +296,7 @@ class App:
         global frame2
         global Storingen
 
-        if reisplanner:
+        if reisplanners:
             self.reisplanner_weghalen()
         if actuele_vertrektijden:
             self.actuele_vertrektijden_weghalen()
@@ -285,7 +342,7 @@ class App:
 
         scrollbar.config(command=self.storingen_weergeven.yview)
 
-reisplanner=False
+reisplanners=False
 reisplanner_weergegeven=False
 reisplanner_stationsweergegeven=False
 actuele_vertrektijden=False
@@ -299,6 +356,6 @@ root = Tk()
 
 app = App(root)
 
-print(reisplanner("Utrecht Centraal", "Hoorn"))
+print(reisplannerUitvoeren("Utrecht Centraal", "Hoorn"))
 
 root.mainloop()
