@@ -17,27 +17,25 @@ def storingen_ophalen_gepland():                                               #
             traject = storing['Traject'][0]                                    #Haalt uit de key storing de tag Traject
             bericht = storing['Bericht'][0]                                    #Haalt uit de key storing de tag Bericht
             bericht_new = re.sub("<.*?>", "", bericht)                         #Maakt van de variabele Bericht, een nieuwe variabele zonder de Html-tags
-            storingen_uitvoer = 'Traject:' + traject + bericht_new             #Voegt Traject en het bericht samen tot een bericht
+            storingen_uitvoer = 'Traject:' + traject + bericht_new + '\n'      #Voegt Traject en het bericht samen tot een bericht
             uitvoerSTR += [storingen_uitvoer]                                  #Hierin worden de berichten samen met het traject toegevoegt aan een list
     except:
         uitvoerSTR = ['Er zijn geen geplande storingen\n']                     #Als er geen keys traject en bericht voorkomen, wordt er een foutmelding laten zien
     return uitvoerSTR
 
-print(storingen_ophalen_gepland())
 
 def storingen_ophalen_ongepland():                                             #Hier begint de Functie die ongeplande storingen ophaalt
 
     uitvoerSTR = []                                                            #Uitvoer is een lege list
     try:
-       for storing in storingXML['Storingen'][0]['Ongepland'][0]['Storing']:      #Loopt door de xml file
+       for storing in storingXML['Storingen'][0]['Ongepland'][0]['Storing']:   #Loopt door de xml file
             traject = storing['Traject'][0]                                    #Haalt uit de key storing de tag Traject
             bericht = storing['Bericht'][0]                                    #Haalt uit de key storing de tag Bericht
-            bericht_new = re.sub("<.*?>", "", bericht)                      #Maakt van de variabele Bericht, een nieuwe variabele zonder de Html-tags
-            storingen_uitvoer = 'Traject:' + traject + bericht_new          #Voegt Traject en het bericht samen tot een bericht
-            uitvoerSTR += [storingen_uitvoer]                               #Hierin worden de berichten samen met het traject toegevoegt aan een list
+            bericht_new = re.sub("<.*?>", "", bericht)                         #Maakt van de variabele Bericht, een nieuwe variabele zonder de Html-tags
+            storingen_uitvoer = 'Traject:' + traject + bericht_new             #Voegt Traject en het bericht samen tot een bericht
+            uitvoerSTR += [storingen_uitvoer]                                  #Hierin worden de berichten samen met het traject toegevoegt aan een list
     except:
-        uitvoerSTR = ['Er zijn geen ongeplande storingen']                  #Als er geen keys traject en bericht voorkomen, wordt er een foutmelding laten zien
+        uitvoerSTR = ['Er zijn geen ongeplande storingen']                     #Als er geen keys traject en bericht voorkomen, wordt er een foutmelding laten zien
 
     return uitvoerSTR
 
-print(storingen_ophalen_ongepland())
