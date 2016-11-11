@@ -6,7 +6,7 @@ import xmltodict
 from API_NS import (auth_details,
                      api_url)
 
-#Voor debuggen.
+#Voor offline debuggen.
 # with open('offlinevert.xml') as myXMLfile:
 #      dienstRegelingXML = xmltodict.parse(myXMLfile.read(),dict_constructor=dict)
 
