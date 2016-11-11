@@ -34,4 +34,3 @@ def actuele_vertrekinformatie():
         uitvoer_avt_final += [uitvoer_avt]
     return uitvoer_avt_final        ##Returned de complete uitvoer in een lijst
 
-print(actuele_vertrekinformatie())
