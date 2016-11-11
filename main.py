@@ -1,9 +1,9 @@
 from tkinter import *
-#import actuele_vertrektijden
+
 from Vertragingen import vertragingen
-from storingen import storingen_ophalen
-#from reisplanner import optimaalReis
-from actuele_vertrektijden import actuele_vertrekinformatie
+from actueleVertrektijden.actuele_vertrektijden import actuele_vertrekinformatie
+from storingen import storingen_ophalen_gepland
+from storingen import storingen_ophalen_ongepland
 
 class App:
 
@@ -200,7 +200,7 @@ class App:
         self.storingen_weghalen_knop.destroy()
         self.storingen_functie_knop.destroy()
         if storingen_weergegeven:
-            self.storing_weergeven.destroy()
+            self.storingen_weergeven.destroy()
             storingen_weergegeven=False
 
         global Storingen
@@ -211,19 +211,35 @@ class App:
         global scrollbar
         global storingen_weergegeven
 
+        if storingen_weergegeven:
+            self.storingen_weergeven.destroy()
+            storingen_weergegeven=False
+
         storingen_weergegeven=True
 
-        self.storing_weergeven = Canvas(frame3, yscrollcommand=scrollbar.set)#, bg='blue')
-        self.storing_weergeven.config(width=1000, height=500)
-        self.storing_weergeven.config(scrollregion=(500,0,1500, (250*len(storingen_ophalen()))))
-        self.storing_weergeven.pack(expand=YES)
+        #self.storing_weergeven = Canvas(frame3, yscrollcommand=scrollbar.set)#, bg='blue')
+        #self.storing_weergeven.config(width=1000, height=500)
+        #self.storing_weergeven.config(scrollregion=(500,0,1500, (250*len(storingen_ophalen()))))
+        #self.storing_weergeven.pack(expand=YES)
 
-        i=0
-        for storing in storingen_ophalen():
-            self.storing_weergeven.create_text(900, 50+i*250, text=storing, width=700)
-            i+=1
+        #i=0
+        #j=0
+        #for storing in storingen_ophalen_gepland():
+        #    self.storing_weergeven.create_text(900, 50+i*250, text=storing, width=700)
+        #    i+=1
+        #for storing in storingen_ophalen_ongepland():
+        #    self.storing_weergeven.create_text(900, 50+i*250+j*250, text=storing, width=700)
+        #    j+=1
 
-        scrollbar.config(command=self.storing_weergeven.yview)
+        self.storingen_weergeven = Text(frame3, width=900, height=1000)
+        for storing in storingen_ophalen_gepland():
+            self.storingen_weergeven.insert(END, storing)
+        for storing in storingen_ophalen_ongepland():
+            self.storingen_weergeven.insert(END, storing)
+        self.storingen_weergeven.pack(fill=BOTH)
+
+        storingen_weergegeven=True
+        scrollbar.config(command=self.storingen_weergeven.yview)
 
 quentin=False
 actuele_vertrektijden=False
