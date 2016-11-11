@@ -10,11 +10,11 @@ from datetime import datetime
 # with open('offlinetest.xml') as xmlfile:
 #    reisplannerXML=xmltodict.parse(xmlfile.read(),dict_constructor=dict)
 
-def reisplannerUitvoeren(huidigeStationnaam, bestemmingsnaam):
+def reisplannerUitvoeren(huidigeStation, bestemming):
     'Returnt een string met de optimale reis van waarde huidigeStation, bestemming, inclusief eventuele overstap'
 
     returnString=[]
-    api_url = 'http://webservices.ns.nl/ns-api-treinplanner?fromStation='+huidigeStationnaam+'&toStation='+bestemmingsnaam+'&departure=trueexterne'
+    api_url = 'http://webservices.ns.nl/ns-api-treinplanner?fromStation='+huidigeStation+'&toStation='+bestemming+'&departure=trueexterne'
     response = requests.get(api_url, auth=auth_details)
     reisplannerXML = xmltodict.parse(response.text)
     def optimaalReis():
@@ -40,7 +40,7 @@ def reisplannerUitvoeren(huidigeStationnaam, bestemmingsnaam):
                     trein=xml['ReisDeel']['VervoerType']
         return tijd, spoor, trein, overstapStation
 
-    returnString.append(('De eerstevolgende '+optimaalReis()[2]+' trein naar '+bestemmingsnaam+' vertrekt om '+optimaalReis()[0]+' vanaf spoor '+optimaalReis()[1]+'.'))
+    returnString.append(('De eerstevolgende '+optimaalReis()[2]+' trein naar '+bestemming+' vertrekt om '+optimaalReis()[0]+' vanaf spoor '+optimaalReis()[1]+'.'))
     if optimaalReis()[3]!=[]:
         returnString.append('\nU heeft een overstap in: '+(', '.join(optimaalReis()[3])))
     return (''.join(returnString))
