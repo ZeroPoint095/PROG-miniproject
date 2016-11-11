@@ -22,13 +22,16 @@ def actuele_vertrekinformatie():
                     VertrekVertragingTekst = vertrek['VertrekVertragingTekst']
                     vertraging = VertrekVertragingTekst
         else:
-            vertraging = 'geen vertraging'
+            vertraging = '+0'
         if 'RouteTekst' in vertrek:     ##Kijkt of er tussenstations zijn op het traject
                     route = vertrek['RouteTekst']
         else:
             route = 'geen tussenstations'
         ##Uitvoer van alle opties
-        uitvoer_avt = 'Om '+vertrektijd + ' vertrekt een trein (' + treintype+  ') naar ' + eindbestemming + ' van spoor ' + spoor + ' met een eventuele vertraging van: ' + vertraging + '.' + '\n '+  ' De eventuele tussenstations zijn: ' + route
+        #uitvoer_avt = 'Om '+vertrektijd + ' vertrekt een trein (' + treintype+  ') naar ' + eindbestemming + ' van spoor ' + spoor + ' met een eventuele vertraging van: ' + vertraging + '.' + '\n '+  ' De eventuele tussenstations zijn: ' + route
+        uitvoer_avt = vertrektijd + vertraging + ' naar '+ eindbestemming + ' ' + 'Spoor: ' + spoor
         ##Uitvoer wordt toegevoegd aan een lijst
         uitvoer_avt_final += [uitvoer_avt]
     return uitvoer_avt_final        ##Returned de complete uitvoer in een lijst
+
+print(actuele_vertrekinformatie())
