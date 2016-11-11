@@ -4,7 +4,7 @@ from API_NS import (auth_details)
 from datetime import datetime
 
 huidigeStation='Utrecht Centraal'
-bestemming='GUI knoppen uitvoer hier plaatsen'
+bestemming='Gouda'
 
 ## offline xml
 # with open('offlinetest.xml') as xmlfile:
@@ -32,8 +32,12 @@ def reisplanner(huidigeStation, bestemming):
                 tijd=datetime.strptime(tijd, "%Y-%m-%dT%H:%M:%S%z")#converteert ISO tijd naar datetime tijd
                 tijd=datetime.strftime(tijd, '%H:%M') #split de tijd in enkel uren en minuten
                 #tijdOver=datetime.strftime(tijd, '%H:%M')-datetime.now()
-                spoor=xml['ReisDeel'][0]['ReisStop'][0]['Spoor']['#text']
-                trein=xml['ReisDeel'][0]['VervoerType']
+                if overstap >0:
+                    spoor=xml['ReisDeel'][0]['ReisStop'][0]['Spoor']['#text']
+                    trein=xml['ReisDeel'][0]['VervoerType']
+                else:
+                    spoor=xml['ReisDeel']['ReisStop'][0]['Spoor']['#text']
+                    trein=xml['ReisDeel']['VervoerType']
         return tijd, spoor, trein, overstapStation
 
     returnString.append(('De eerstevolgende '+optimaalReis()[2]+' trein naar '+bestemming+' vertrekt om '+optimaalReis()[0]+' vanaf spoor '+optimaalReis()[1]+'.'))
