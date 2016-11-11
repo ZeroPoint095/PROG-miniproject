@@ -1,8 +1,8 @@
 from tkinter import *
 
+import reisplanner
 from Vertragingen import vertragingen
 from actueleVertrektijden.actuele_vertrektijden import actuele_vertrekinformatie
-from reisplanner import reisplanner
 from reisplanner.intercitystations import returnStations
 from storingen import storingen_ophalen_gepland
 from storingen import storingen_ophalen_ongepland
@@ -85,6 +85,7 @@ class App:
         if reisplanner_stationsweergegeven:
             for station in ICDICT[stationsletter]:
                 self.station_knop.destroy()
+            reisplanner_stationsweergegeven=False
 
         reisplanner_stationsweergegeven=True
 
