@@ -1,10 +1,12 @@
 from tkinter import *
-from reisplanner import reisplanner
+
 from Vertragingen import vertragingen
-from actuele_vertrektijden import actuele_vertrekinformatie
-from intercitystations import returnStations
+from actueleVertrektijden.actuele_vertrektijden import actuele_vertrekinformatie
+from reisplanner import reisplanner
+from reisplanner.intercitystations import returnStations
 from storingen import storingen_ophalen_gepland
 from storingen import storingen_ophalen_ongepland
+
 
 class App:
 
@@ -299,6 +301,6 @@ root = Tk()
 
 app = App(root)
 
-print(reisplanner("Utrecht Centraal", "Hoorn"))
+#print(reisplanner("Utrecht Centraal", "Hoorn"))
 
 root.mainloop()
